@@ -3,37 +3,46 @@
 <head>
   <meta charset="utf-8" content="">
   <title>Gogol ™</title>
-  <link rel="icon" href="icon.png" type="image/x-icon"/>
+  <link rel="icon" href="res/icon.png" type="image/x-icon" />
   <style>
     button {
       padding: 50px 150px;
       border: none;
+    }
+
+    @font-face {
+      font-family: gatafunhos;
+      src: url('res/gatafunhos.ttf');
+    }
+
+    * {
+      font-family: gatafunhos;
     }
   </style>
 </head>
 
 <body>
   <div style="margin-left: auto; margin-right: 0px; width: 650px; display: flex; align-items: center;">
-    <button onclick=gmail() style="background-image: url('gmail.png');"></button>
-    <button onclick=imageResults() style="background-image: url('images.png');"></button>
+    <button onclick=gmail() style="background-image: url('res/gmail.png');"></button>
+    <button onclick=imageResults() style="background-image: url('res/images.png');"></button>
   </div>
-  <img src="gogol.png" alt="gogol" style="display: block;  margin: auto; max-height: 400px;"></img>
+  <img src="res/gogol.png" alt="gogol" style="display: block;  margin: auto; max-height: 400px;"></img>
   <div style="margin: auto; width: 1200px; display: flex; align-items: center;">
     <div style="width: 300px; height: 100px"></div>
     <input id="searchbox" type="text" style="width: 800px; height: 50px; font-size: xx-large;">
-    <button id="searchbtn" onclick=searchResults() style="background-image: url('search.png');"></button>
+    <button id="searchbtn" onclick=searchResults() style="background-image: url('res/search.png');"></button>
   </div>
 </body>
 
 <script>
   var input = document.getElementById("searchbox");
 
-  input.addEventListener("keyup", function(event) {
+  input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
       document.getElementById("searchbtn").click();
     }
-  }); 
+  });
 
   function searchResults() {
     location.href = "https://www.google.com/search?q=" + document.getElementById("searchbox").value;
