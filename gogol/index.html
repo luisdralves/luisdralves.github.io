@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <meta charset="utf-8" content="">
+  <title>Gogol ™</title>
+  <link rel="icon" href="res/icon.png" type="image/x-icon" />
+  <style>
+    button {
+      padding: 50px 150px;
+      border: none;
+    }
+
+    @font-face {
+      font-family: gatafunhos;
+      src: url('res/gatafunhos.ttf');
+    }
+
+    * {
+      font-family: gatafunhos;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin-left: auto; margin-right: 0px; width: 650px; display: flex; align-items: center;">
+    <button onclick=gmail() style="background-image: url('res/gmail.png');"></button>
+    <button onclick=imageResults() style="background-image: url('res/images.png');"></button>
+  </div>
+  <img src="res/gogol.png" alt="gogol" style="display: block;  margin: auto; max-height: 400px;"></img>
+  <div style="margin: auto; width: 1200px; display: flex; align-items: center;">
+    <div style="width: 300px; height: 100px"></div>
+    <input id="searchbox" type="text" style="width: 800px; height: 50px; font-size: xx-large;">
+    <button id="searchbtn" onclick=searchResults() style="background-image: url('res/search.png');"></button>
+  </div>
+</body>
+
+<script>
+  var input = document.getElementById("searchbox");
+
+  input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById("searchbtn").click();
+    }
+  });
+
+  function searchResults() {
+    var location = "https://cors-anywhere.herokuapp.com/https://www.google.com/search?q=" + document.getElementById("searchbox").value;
+    var req = new XMLHttpRequest();
+    req.open('GET', location, false);
+    req.send(null);
+    if (req.status == 200) {
+      var content = req.responseText;
+      document.write(content.replace("\<\/style\>", "@font-face {font-family: gatafunhos; src: url('https://gitinho.github.io/res/gatafunhos.ttf');} * {font-family: gatafunhos !important;}</style>"))
+    }
+  }
+
+  function imageResults() {
+    location.href = "https://www.google.com/search?tbm=isch&q=" + document.getElementById("searchbox").value;
+  }
+
+  function gmail() {
+    location.href = "https://mail.google.com/";
+  }
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+#login, #register {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 70%;
+}
+
+#login > form, #register > form {
+    background: white;
+    max-width: 20em;
+    margin: auto;
+    display: grid;
+    text-align: left;
+}
+
+#login > form > label, #register > form > label {
+    padding: 1em;
+    font-weight: bold;
+}
+
+#login > form > label > input, #register > form > label > input {
+    width: 100%;
+    background: white;
+    border-bottom: 1px;
+    border-style: hidden;
+    border-bottom-style: solid;
+}
+
+#login > form > input, #register > form > input {
+    margin-left: auto;
+    width: 6em;
+    text-align: center;
+}
+

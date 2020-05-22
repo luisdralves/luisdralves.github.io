@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <title>freq</title>
+  <meta charset="utf-8" />
+  <meta content="">
+
+</head>
+
+<body>
+  <div id="osc1" style="display: grid; grid-template-columns: 20px auto">
+    <input type="range" min="0" max="100" value="0" class="slider" id="volumeSlider1" orient="vertical"
+      style="height: 120px; -webkit-appearance: slider-vertical;">
+    <div>
+      <input type="range" min="5000" max="14288" value="8781" class="slider" id="freqSlider1"
+        style="width: 100%; padding: 10px 0px">
+      <div style="display: flex">
+        <input type="number" id="freqValue1" style="width: 76px;">
+        <p id="freqInfo1"></p>
+      </div>
+      <input type="radio" name="waveType1" value="sine" checked> Sine
+      <input type="radio" name="waveType1" value="square"> Square
+      <input type="radio" name="waveType1" value="sawtooth"> Sawtooth
+      <input type="radio" name="waveType1" value="triangle"> Triangle
+    </div>
+  </div>
+  <div id="osc2" style="display: grid; grid-template-columns: 20px auto">
+    <input type="range" min="0" max="100" value="0" class="slider" id="volumeSlider2" orient="vertical"
+      style="height: 120px; -webkit-appearance: slider-vertical;">
+    <div>
+      <input type="range" min="5000" max="14288" value="8781" class="slider" id="freqSlider2"
+        style="width: 100%; padding: 10px 0px">
+      <div style="display: flex">
+        <input type="number" id="freqValue2" style="width: 76px;">
+        <p id="freqInfo2"></p>
+      </div>
+      <input type="radio" name="waveType2" value="sine" checked> Sine
+      <input type="radio" name="waveType2" value="square"> Square
+      <input type="radio" name="waveType2" value="sawtooth"> Sawtooth
+      <input type="radio" name="waveType2" value="triangle"> Triangle
+    </div>
+  </div>
+  <div id="osc3" style="display: grid; grid-template-columns: 20px auto">
+    <input type="range" min="0" max="100" value="0" class="slider" id="volumeSlider3" orient="vertical"
+      style="height: 120px; -webkit-appearance: slider-vertical;">
+    <div>
+      <input type="range" min="5000" max="14288" value="8781" class="slider" id="freqSlider3"
+        style="width: 100%; padding: 10px 0px">
+      <div style="display: flex">
+        <input type="number" id="freqValue3" style="width: 76px;">
+        <p id="freqInfo3"></p>
+      </div>
+      <input type="radio" name="waveType3" value="sine" checked> Sine
+      <input type="radio" name="waveType3" value="square"> Square
+      <input type="radio" name="waveType3" value="sawtooth"> Sawtooth
+      <input type="radio" name="waveType3" value="triangle"> Triangle
+    </div>
+  </div>
+  <div id="osc4" style="display: grid; grid-template-columns: 20px auto">
+    <input type="range" min="0" max="100" value="0" class="slider" id="volumeSlider4" orient="vertical"
+      style="height: 120px; -webkit-appearance: slider-vertical;">
+    <div>
+      <input type="range" min="5000" max="14288" value="8781" class="slider" id="freqSlider4"
+        style="width: 100%; padding: 10px 0px">
+      <div style="display: flex">
+        <input type="number" id="freqValue4" style="width: 76px;">
+        <p id="freqInfo4"></p>
+      </div>
+      <input type="radio" name="waveType4" value="sine" checked> Sine
+      <input type="radio" name="waveType4" value="square"> Square
+      <input type="radio" name="waveType4" value="sawtooth"> Sawtooth
+      <input type="radio" name="waveType4" value="triangle"> Triangle
+    </div>
+  </div>
+
+  <div style="display:flex; justify-content: space-around; padding-top: 20px;">
+    <canvas id="scope" width=600px height=200></canvas>
+    <canvas id="spectrum" width=600px height=200></canvas>
+  </div>
+
+  <script src="1.js"></script>
+</body>
+
+</html>

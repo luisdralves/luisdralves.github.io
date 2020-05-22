@@ -1,60 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" content="">
-  <title>Gogol ™</title>
-  <link rel="icon" href="res/icon.png" type="image/x-icon" />
-  <style>
-    button {
-      padding: 50px 150px;
-      border: none;
-    }
-
-    @font-face {
-      font-family: gatafunhos;
-      src: url('res/gatafunhos.ttf');
-    }
-
-    * {
-      font-family: gatafunhos;
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>Luís Miguel Alves</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
-  <div style="margin-left: auto; margin-right: 0px; width: 650px; display: flex; align-items: center;">
-    <button onclick=gmail() style="background-image: url('res/gmail.png');"></button>
-    <button onclick=imageResults() style="background-image: url('res/images.png');"></button>
+<body class="bg-dark" style="font-family: Ubuntu">
+  <div style="max-width: 20rem; margin: 20px auto;">
+    <h3 style="padding: 20px; text-align: center; color: white;">Luís Miguel Alves</h4>
+    <div style="width: 60%; margin: auto;">
+      <a href="FakeNews/list_news.php" class="btn btn-info">Fake News</a>
+      <a href="SimpleReddit/index.php" class="btn btn-info">Simple Reddit</a>
+      <a href="lbaw/index.html" class="btn btn-info">Map IO</a>
+      <a href="ajd/index.html" class="btn btn-info">AJD mockup</a>
+      <a href="freq/index.html" class="btn btn-info">Simple oscillator</a>
+      <a href="gogol/index.html" class="btn btn-info">Gogol™</a>
+      <a href="colournamer/index.html" class="btn btn-info">Colour namer</a>
+      <a href="rels/index.html" class="btn btn-info">What's the time in rels?</a>
+    </div>
   </div>
-  <img src="res/gogol.png" alt="gogol" style="display: block;  margin: auto; max-height: 400px;"></img>
-  <div style="margin: auto; width: 1200px; display: flex; align-items: center;">
-    <div style="width: 300px; height: 100px"></div>
-    <input id="searchbox" type="text" style="width: 800px; height: 50px; font-size: xx-large;">
-    <button id="searchbtn" onclick=searchResults() style="background-image: url('res/search.png');"></button>
-  </div>
+
 </body>
-
-<script>
-  var input = document.getElementById("searchbox");
-
-  input.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      document.getElementById("searchbtn").click();
-    }
-  });
-
-  function searchResults() {
-    location.href = "https://www.google.com/search?q=" + document.getElementById("searchbox").value;
-  }
-
-  function imageResults() {
-    location.href = "https://www.google.com/search?tbm=isch&q=" + document.getElementById("searchbox").value;
-  }
-
-  function gmail() {
-    location.href = "https://mail.google.com/";
-  }
-</script>
 
 </html>

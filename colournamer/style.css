@@ -1,0 +1,13 @@
+.colour-btn {
+	color: inherit;
+}
+
+.colour-btn {
+	width: 100%;
+	padding: 8px;
+	border-radius: 10px;
+}
+
+body {
+	font-family: Ubuntu !important;
+}

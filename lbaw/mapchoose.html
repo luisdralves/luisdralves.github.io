@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>Meeting Point</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+		<link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css" />
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+		<script src="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
+
+	</head>
+	<body style="width: 720px; margin: auto">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#map" id="maptab">Localização no Mapa</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#parish" id="parishtab">Freguesia</a>
+			</li>
+		</ul>
+		<div id="mymap" style="width: 720px; height: 480px;"></div>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade active show" id="map">
+				<form>
+					<fieldset>
+						<div class="form-group">
+							<label>Escolha uma localização no mapa</label>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+			<div class="tab-pane fade" id="parish">
+				<form>
+					<fieldset>
+						<div class="form-group">
+							<label for="parishselect">Escolha a freguesia relevante:</label>
+							<select class="form-control" id="parishselect">
+								<option>Porto (município)</option>
+								<option>Aldoar</option>
+								<option>Bonfim</option>
+								<option>Campanhã</option>
+								<option>Cedofeita</option>
+								<option>Foz do Douro</option>
+								<option>Lordelo do Ouro</option>
+								<option>Massarelos</option>
+								<option>Miragaia</option>
+								<option>Nevogilde</option>
+								<option>Paranhos</option>
+								<option>Ramalde</option>
+								<option>Santo Ildefonso</option>
+								<option>São Nicolau</option>
+								<option>Sé</option>
+								<option>Vitória</option>
+							</select>
+							
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<script src="mapcommon.js"></script>
+		<script src="mapchoose.js"></script>
+	</body>
+</html>
+

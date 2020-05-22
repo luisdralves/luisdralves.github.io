@@ -1,0 +1,146 @@
+body > header {
+    background: #046DD5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1em;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body > header > h1 {
+    font-size: 1.5em;
+}
+
+body > header > h2 {
+    font-size: 0.75em;
+}
+
+#signup {
+    
+    font-size: 0.8em;
+}
+
+#signup > a:first-of-type:after {
+    content: " | ";
+}
+
+#hamburger {
+    display: none;
+}
+
+
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+}
+
+li {
+    padding: 1em;
+    border: 0.3em;
+    border-top-style: solid;
+    flex-grow: 3;
+}
+
+li > a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+li:nth-of-type(1) {
+    border-color: #E1493E;
+}
+li:nth-of-type(2) {
+    border-color: #8ABA56;
+}
+li:nth-of-type(3) {
+    border-color: #5B4282;
+}
+li:nth-of-type(4) {
+    border-color: #FF8932;
+}
+li:nth-of-type(5) {
+    border-color: #19B6E9;
+}
+li:nth-of-type(6) {
+    border-color: #E84C8B;
+}
+
+#related {
+    background: #2A2F33;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 1em;
+}
+
+#news > article {
+    position: relative;
+    margin-top: 1em;
+    margin-right: 1em;
+    background: white;
+}
+
+#news > article > header {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    width: 18em;
+    text-shadow: 0.5em 0.5em 0.5em black;
+}
+
+#news > article > img {
+    width: 100%;
+}
+
+#news > article > p {
+    margin: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#news > article >  p:first-of-type:first-letter {
+    font-size: 2em;
+}
+
+#news > article > footer {
+    background: #F4655F;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+#news > article > footer > a {
+    text-decoration: underline;
+}
+
+.tags > a{
+    text-decoration: underline;
+}
+
+.author::before {
+    content: "By ";
+}
+
+.date {
+    padding: 1em;
+}
+
+.comments::after {
+    content: " comments";
+}
+
+footer {
+    background: #2A2F33;
+    color: white;
+    padding: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
