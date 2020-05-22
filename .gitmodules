@@ -1,0 +1,3 @@
+[submodule "rels"]
+	path = rels
+	url = https://github.com/luisdralves/rels
