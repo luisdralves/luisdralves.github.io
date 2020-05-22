@@ -51,7 +51,7 @@
     req.send(null);
     if (req.status == 200) {
       var content = req.responseText;
-      document.write(content.replace("\<\/style\>", "@font-face {font-family: gatafunhos; src: url('https://gitinho.github.io/res/gatafunhos.ttf');} * {font-family: gatafunhos !important;}</style>"))
+      document.write(content.replace("\<\/style\>", "@font-face {font-family: gatafunhos; src: url('res/gatafunhos.ttf');} * {font-family: gatafunhos !important;}</style>"))
     }
   }
 
