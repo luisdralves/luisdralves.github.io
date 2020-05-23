@@ -1,3 +1,6 @@
 [submodule "rels"]
 	path = rels
 	url = https://github.com/luisdralves/rels
+[submodule "lbaw1851"]
+	path = MeetingPoint
+	url = https://git.fe.up.pt/lbaw/archive/lbaw18/lbaw1851
