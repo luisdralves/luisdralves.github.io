@@ -11,6 +11,11 @@ td:nth-of-type(3) {
 }
 
 .btn {
+	width: 100%;
+	margin: 6px;
+}
+
+td > .btn {
 	width: 86px;
 	margin: 2px 6px;
 	padding: 2px 4px;
@@ -25,7 +30,7 @@ td:nth-of-type(3) {
 	td:nth-of-type(3) {
 		width: 325px;
 	}
-	.btn {
+	td > .btn {
 		margin: 0px 6px;
 	}
 }
