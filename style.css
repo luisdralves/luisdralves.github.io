@@ -8,6 +8,61 @@ body {
 	text-align: center;
 }
 
+.card {
+	width: 320px;
+	margin: 32px auto;
+	border-radius: 16px;
+}
+
+.list-group {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+
+.list-group-item {
+	background-color: #17a2b8 !important;
+	color: white;
+	padding: 6px 12px 6px;
+	border-left: none;
+	border-right: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.list-group>.list-group-item:last-child {
+	border-bottom-right-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+
+.list-group-item>p {
+	margin: 0px;
+	font-family: Ubuntu;
+}
+
+.list-group-item a {
+	color: white;
+	text-decoration: underline;
+	padding: 2px;
+	border-radius: 6px;
+	transition: background-color 0.4s;
+}
+
+.list-group-item a:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.align-left {
+	justify-content: flex-start !important;
+}
+
+.fas, .fab, .far {
+	margin-right: 16px;
+	width: 8px;
+}
+
 td:nth-of-type(1) {
 	width: 20%;
 }
