@@ -1,0 +1,56 @@
+.card,.halfcard {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    transition: display 2s;
+}
+.halfcard {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none !important;
+    border-color: black;
+    margin-right: -190px;
+}
+.value, .suit {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.value {
+    margin-top: 4px;
+    font-size: 64px;
+    transform: scaleX(0.8);
+}
+.suit {
+    font-size: 32px;
+}
+.halfcard>.value,.halfcard>.suit {
+    margin-right: 190px;
+}
+.card>.value,.card>.suit {
+    margin-right: 190px;
+}
+.graphic {
+    font-size: 64px;
+    width: 171px;
+    margin: -29px auto;
+}
+span{
+    color: white;
+}
+.rotated.value {
+    transform: rotate(180deg) scaleX(0.8);
+}
+.rotated.suit {
+    transform: rotate(180deg);
+}
+.rotated {
+    margin-left: 190px;
+    margin-right: 0px !important;
+}
+.graphic {
+    margin-bottom: -33px;
+}
