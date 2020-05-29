@@ -192,6 +192,7 @@ var colours = [
 	["#4666FF", "Neon blue"],
 	["#4682B4", "Steel blue"],
 	["#47ABCC", "Maximum blue"],
+	["#47BDDF", "Zima blue"],
 	["#483C32", "Dark lava"],
 	["#483C32", "Taupe"],
 	["#483D8B", "Dark slate blue"],

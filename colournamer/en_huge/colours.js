@@ -1908,6 +1908,7 @@ var colours = [
 	["#475877", "chambray"],
 	["#475F94", "dusky blue"],
 	["#47634B", "ozone"],
+	["#47BDDF", "Zima blue"],
 	["#47D6C1", "PMS3255"],
 	["#480404", "rustic red"],
 	["#480607", "bulgarian rose"],

@@ -44,6 +44,7 @@ var colours = [
 	["#40E0D0", "Turquesa"],
 	["#44D7A8", "Eucalipto"],
 	["#4682B4", "Azul aço"],
+	["#47BDDF", "Azul Zima"],
 	["#483D8B", "Azul ardósia escuro"],
 	["#48D1CC", "Turquesa média"],
 	["#4B0082", "Índigo"],
