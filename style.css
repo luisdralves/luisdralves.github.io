@@ -1,6 +1,9 @@
 body {
 	font-family: Ubuntu;
 	color: white;
+	width: 80%;
+	max-width: 1536px;
+	margin: 20px auto;
 }
 
 .title {
@@ -8,9 +11,20 @@ body {
 	text-align: center;
 }
 
-.card {
-	width: 320px;
+.flex {
+	width: calc(100% - 128px);
 	margin: 32px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex > p {
+	width: calc(100% - 286px);
+	text-align: justify;
+}
+
+.card {
+	width: 260px;
 	border-radius: 16px;
 }
 
@@ -96,7 +110,6 @@ td {
 
 @media only screen and (min-width: 960px) {
 	table {
-		width: 80% !important;
 		margin: auto;
 		table-layout: fixed;
 	}
@@ -108,7 +121,6 @@ td {
 	}
 	.note {
 		text-align: right;
-		width: 80% !important;
 		margin: auto;
 	}
 }

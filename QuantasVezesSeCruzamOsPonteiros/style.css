@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-	width: 480px; 
+	width: 500px; 
 	margin: auto;
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 #time {
-	font-size: 32px;
+	font-size: 64px;
 }
 
 button {

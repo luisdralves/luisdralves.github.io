@@ -58,8 +58,8 @@ pre {
 }
 
 .card-container {
-	width: 1020px;
-	height: 1506px;
+	width: 1060px;
+	height: 1500px;
 	margin: 64px auto;
 	display: flex;
 	flex-direction: column;
@@ -73,9 +73,9 @@ pre {
 }
 
 .card {
-	border-width: 3px;
+	border-width: 2px;
 	border-radius: 32px;
-	width: 320px;
+	width: 32%;
 	padding: 5px;
 }
 
@@ -182,42 +182,54 @@ pre {
 
 .flag-holder {
 	display: flex;
-	width: 100px;
+	width: 110px;
 	height: 20px;
 	float: right;
 }
 
 .push {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
-.flag {
+.flag, .star {
 	width: 20px;
 	height: 20px;
 	background-size: 100% 100%;
+	margin-left: 2px;
+}
+
+.flag {
+	filter: drop-shadow(1px 0px 0 black)
+			drop-shadow(-1px 0px 0 black)
+			drop-shadow(0px -1px 0 black)
+			drop-shadow(0px 1px 0 black);
 }
 
 .pt {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/flag-for-portugal_1f1f5-1f1f9.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-portugal_1f1f5-1f1f9.png");
 }
 
 .en {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/flag-for-united-kingdom_1f1ec-1f1e7.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-united-kingdom_1f1ec-1f1e7.png");
 }
 
 .es {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/flag-for-spain_1f1ea-1f1f8.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-spain_1f1ea-1f1f8.png");
 }
 
 .it {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/flag-for-italy_1f1ee-1f1f9.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-italy_1f1ee-1f1f9.png");
 }
 
 .fr {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/flag-for-france_1f1eb-1f1f7.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-france_1f1eb-1f1f7.png");
+}
+
+.bg {
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/flag-bulgaria_1f1e7-1f1ec.png");
 }
 
 .st {
-	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/white-medium-star_2b50.png");
+	background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/239/star_2b50.png");
 }
