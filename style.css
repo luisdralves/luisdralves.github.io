@@ -1,9 +1,14 @@
 body {
-	font-family: Ubuntu;
+	font-family: 'Ubuntu', sans-serif;
 	color: white;
 	width: 80%;
 	max-width: 1536px;
 	margin: 20px auto;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.930125rem;
 }
 
 .title {
@@ -11,21 +16,33 @@ body {
 	text-align: center;
 }
 
-.flex {
-	width: calc(100% - 128px);
-	margin: 32px auto;
-	display: flex;
-	justify-content: space-between;
+.nav-tabs .nav-link {
+	border-top-left-radius: 1.078em;
+	border-top-right-radius: 1.078em;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
-.flex > p {
-	width: calc(100% - 286px);
+.nav-link, .btn {
+	text-decoration: none;
+}
+
+.flex {
+	width: 100%;
+	margin: 0px;
+	display: block;
+}
+
+.flex > .motivation {
+	width: 100%;
 	text-align: justify;
 }
 
 .card {
 	width: 260px;
+	height: 50%;
 	border-radius: 16px;
+	margin: 32px auto;
 }
 
 .list-group {
@@ -46,7 +63,8 @@ body {
 	align-items: center;
 }
 
-.list-group>.list-group-item:last-child {
+.card .list-group>.list-group-item:last-child {
+	border: 0px;
 	border-bottom-right-radius: 16px;
 	border-bottom-left-radius: 16px;
 }
@@ -56,7 +74,7 @@ body {
 	font-family: Ubuntu;
 }
 
-.list-group-item a {
+a {
 	color: white;
 	text-decoration: underline;
 	padding: 2px;
@@ -64,8 +82,13 @@ body {
 	transition: background-color 0.4s;
 }
 
+a:hover {
+	background-color: rgba(128, 128, 128, 0.75);
+	color: white;
+}
+
 .list-group-item a:hover {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .align-left {
@@ -109,6 +132,19 @@ td {
 }
 
 @media only screen and (min-width: 960px) {
+	.flex {
+		width: calc(100% - 128px);
+		margin: 32px auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.flex > .motivation {
+		width: calc(100% - 286px);
+	}
+	.card {
+		margin: 0px;
+	}
 	table {
 		margin: auto;
 		table-layout: fixed;
