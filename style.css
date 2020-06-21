@@ -16,11 +16,21 @@ p {
 	text-align: center;
 }
 
+.nav-tabs {
+	height: 40px;
+}
+
 .nav-tabs .nav-link {
 	border-top-left-radius: 1.078em;
 	border-top-right-radius: 1.078em;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+.lang-tabs {
+	width: 105px;
+    margin-left: auto;
+    margin-bottom: -40px;
 }
 
 .nav-link, .btn {
