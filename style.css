@@ -1,5 +1,5 @@
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif !important;
 	color: white;
 	width: 80%;
 	max-width: 1536px;
@@ -125,6 +125,7 @@ td:nth-of-type(3) {
 .btn {
 	width: 100%;
 	margin: 6px;
+	font-family: 'Ubuntu', sans-serif !important;
 }
 
 td>.btn {
