@@ -1,18 +1,94 @@
 .content {
-    max-width: 864px;
-    margin: auto;
+	max-width: 864px;
+	margin: auto;
+}
+
+.jumbo {
+	width: 75%;
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.logo {
+	width: 256px;
+	border-radius: 50%;
 }
 
 .nav {
-    width: 100%;
+	width: 100%;
 }
 
 .nav.max {
-    width: max-content !important;
+	width: max-content !important;
+}
+
+.tab-pane {
+	margin-top: 20px;
 }
 
 .fb-container {
-    width: 500px;
-    margin: auto;
+	width: 500px;
+	margin: auto;
 }
 
+#my-fb-container {
+	width: 720px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.fb-column {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.fb-post {
+	width: 340px;
+	text-align: justify;
+}
+
+.fb-img {
+	max-width: 100%;
+}
+
+.details {
+	width: 75%;
+}
+
+.reactions {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.reactions img {
+	width: 12px;
+	margin-right: 2px;
+}
+
+.reactions span {
+	margin-right: 6px;
+}
+
+.inline-spaced {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.align-right {
+	text-align: right;
+	margin-bottom: 0;
+}
+
+.hidden {
+	display: none;
+}
