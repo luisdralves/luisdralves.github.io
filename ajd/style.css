@@ -1,0 +1,18 @@
+.content {
+    max-width: 864px;
+    margin: auto;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav.max {
+    width: max-content !important;
+}
+
+.fb-container {
+    width: 500px;
+    margin: auto;
+}
+

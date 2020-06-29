@@ -4,88 +4,202 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="bootstrap.css">
-	<link rel="stylesheet" href="bootstrap.min.css">
-
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Associação Juvenil de Deão</title>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<script src="https://kit.fontawesome.com/53daabb524.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="index.html">AJDeão</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Quem somos
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="historia.html">História</a>
-							<a class="dropdown-item" href="orgsoc.html">Orgãos Sociais</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="rgi.html">Regulamento Geral Interno</a>
-						</div>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v7.0&appId=372365863422545&autoLogAppEvents=1"
+		nonce="ZuqGN6jf"></script>
+	<div class="content">
+		<ul class="nav nav-pills max">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#home"><i class="fas fa-home"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#who">Quem somos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#act">Atividades</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+					aria-expanded="false">Projetos</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#curr">Projetos em desenvolvimento</a>
+					<a class="dropdown-item" href="#prev">Projetos desenvolvidos</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#caroca">"O Caroça"</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#awards">Prémios</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#gallery">Galeria</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#news">Notícias</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#contacts">Contactos</a>
+			</li>
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade show active" id="home">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#fb"><i class="fab fa-facebook"></i>
+							Facebook</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="atividades.html">Atividades</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Projetos
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="projp.html">Projetos desenvolvidos</a>
-							<a class="dropdown-item" href="projf.html">Projetos em desenvolvimento</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="caroca.html">"O Caroça"</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="premios.html">Prémios</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="galeria.html">Galeria</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="noticias.html">Notícias</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contactos.html">Contactos</a>
+						<a class="nav-link" data-toggle="tab" href="#insta"><i class="fab fa-instagram"></i>
+							Instagram</a>
 					</li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
-					<button class="btn btn-success my-2 my-sm-0" type="submit">Pesquisa</button>
-				</form>
+				<div id="myTabContent2" class="tab-content">
+					<div class="tab-pane fade active show" id="fb">
+						<div class="fb-container">
+							<div class="fb-page" data-href="https://www.facebook.com/assocjuvenildeao/"
+								data-tabs="timeline,messages" data-width="500" data-height="890"
+								data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+								data-show-facepile="true">
+								<blockquote cite="https://www.facebook.com/assocjuvenildeao/"
+									class="fb-xfbml-parse-ignore">
+									<a href="https://www.facebook.com/assocjuvenildeao/">
+										Associação Juvenil de Deão - AJD
+									</a>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="insta">
+						<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+						<iframe src="http://lightwidget.com/widgets/624d18ce33bd507a999f17a86d6066c3.html"
+							scrolling="no" allowtransparency="true" class="lightwidget-widget"
+							style="width:100%;border:0;overflow:hidden;"></iframe>
+					</div>
+				</div>
 			</div>
-		</nav>
-	</header>
+			<div class="tab-pane fade" id="who">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link square active" data-toggle="tab" href="#hist">História</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#logos">Logótipos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#orgsoc">Órgãos Socias</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#values">Valores</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#rgi">Regulamento Geral Interno</a>
+					</li>
+				</ul>
+				<div id="myTabContent3" class="tab-content">
+					<div class="tab-pane fade active show" id="hist">
+						<p>Por iniciativa de alguns/algumas jovens, interpretando o sentir de muitos/as outros/as, e na
+							sequência de algumas conversas tidas por aqui e ali, nasceu a Associação Juvenil de Deão -
+							AJD.
+						</p>
 
-	<div style="max-width: 1500px; margin:auto; padding-top: 50px">
+						<p>De um modo informal e fazendo jus à irreverência tão própria e natural da juventude,
+							realizou-se uma
+							reunião, numa cozinha, à qual compareceram diversos/as jovens da freguesia de Deão, com a
+							finalidade
+							de apresentarem e discutirem a criação de uma associação para promoção, desenvolvimento e
+							apoio de
+							atividades culturais, desportivas, recreativas e sociais a realizar na freguesia, com
+							especial
+							incidência junto das camadas mais jovens, sem descurar o apoio à restante comunidade.
+						</p>
 
-		<div class="jumbotron">
-			<img src="ajdf.png" style="max-width: 400px; max-height: 400px" class="rounded-circle">
-			<h1 class="display-4">Associação Juvenil de Deão</h1>
-			<p class="lead">"Faz-se o caminho ao andar"</p>
+						<p>Na sequência desta reunião embrionária, a juventude, em coligação de vontades e esforços,
+							imbuídos de
+							um forte espírito associativo, iniciaram um projeto de constituição da associação à qual, em
+							reunião
+							de 1 de Dezembro de 1996, denominaram de Associação Juvenil de Deão - AJD. Por sua vez, a
+							AJD foi
+							formalmente fundada em 19 de Abril de 1997 e tem por fim criar e desenvolver actividades
+							sociais,
+							culturais, desportivas e artísticas para a juventude, designadamente na área da ocupação dos
+							tempos
+							livres, do voluntariado, da cooperação e da formação, promovendo e dinamizando o seu acesso
+							à
+							informação, a sua integração social, a participação cívica e a igualdade entre homens e
+							mulheres.
+						</p>
+
+						<p>A AJD, associação sem fins lucrativos, é ainda uma associação RNAJ e beneficia do Programa de
+							Apoio
+							Juvenil – PAJ. A sua característica juvenil ressalta do facto de 75% dos/as seus/suas
+							associados/as,
+							assim como, 75% dos membros da direção terem idade igual ou inferior a 30 anos. Faz parte
+							dos órgãos
+							sociais da ANIMAR (Associação Portuguesa para o Desenvolvimento Local) e da Federação das
+							Associações Juvenis do Distrito de Viana do Castelo, sendo também associada da Federação
+							Nacional
+							das Associações Juvenis - FNAJ. É, ainda, um centro de cultura e desporto filiado no INATEL.
+							Esta
+							associação é membro do Conselho Geral do Agrupamento de Escolas de Arga e Lima e da Comissão
+							Social
+							Inter-freguesias do Vale do Lima Sul.
+						</p>
+						<br>
+						<p>Foi no dia 19 de Abril de 1997 que a Associação Juvenil de Deão – AJD, foi fundada
+							oficialmente. Está
+							inscrita no Registo Nacional de Associações Juvenis desde 31 de Outubro de 1997.
+						</p>
+					</div>
+					<div class="tab-pane fade" id="orgsoc">
+						<p>orgsoc</p>
+					</div>
+					<div class="tab-pane fade" id="logos">
+						<p>logos</p>
+					</div>
+					<div class="tab-pane fade" id="values">
+						<p>values</p>
+					</div>
+					<div class="tab-pane fade" id="rgi">
+						<p>rgi</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="dropdown1">
+				<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
+					fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+					iphone
+					skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings
+					gentrify squid 8-bit cred pitchfork.</p>
+			</div>
+			<div class="tab-pane fade" id="dropdown2">
+				<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master
+					cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party
+					locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before
+					they
+					sold out farm-to-table VHS viral locavore cosby sweater.</p>
+			</div>
 		</div>
-
 	</div>
 
 </body>
