@@ -119,7 +119,17 @@ td:nth-of-type(2) {
 }
 
 td:nth-of-type(3) {
+	width: 60px;
+}
+
+td:nth-of-type(4) {
 	width: 120px;
+}
+
+.techs {
+	font-style: italic;
+	font-size: small;
+	color: cadetblue;
 }
 
 .btn {
@@ -160,7 +170,7 @@ td {
 		margin: auto;
 		table-layout: fixed;
 	}
-	td:nth-of-type(3) {
+	td:nth-of-type(4) {
 		width: 325px;
 	}
 	td>.btn {
