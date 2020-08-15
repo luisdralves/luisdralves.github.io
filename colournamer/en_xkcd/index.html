@@ -4,6 +4,7 @@
 	<title>Colour Namer 🎨</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="../style.css" />
 	<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 </head>
@@ -11,23 +12,30 @@
 <body>
 	<h1 style="text-align: center">Colour Namer 🎨</h1>
 	<h3 style="text-align: center">XKCD Colours</h3>
-	<div style="display: flex; width: 740px; height: 386px; margin: auto">
-		<div>
-			<div class="wheel" id="colorWheelDemo"></div>
-			<input id="hex" type="text" style="margin: 12px 0px 0px; width: 300px; height: 28px;"></input>
+	<div style="display: flex; width:max-content; margin: auto">
+		<div id="basic" style="width: 240px">
+			<video autoplay id="cam" style="width: 240px; height: 180px"></video>
+			<canvas id="pause" style="width: 240px; height: 180px"></canvas>
+			<p><button class="btn btn-primary" onclick="start()">Capture video</button> <button class="btn btn-primary" onclick="stop()">Stop</button></p>
 		</div>
-		<div id="colorname"
-			style="margin: 0px 20px; padding: 22px 20px; border-radius: 15px; width: 100px;">
-		</div>
-		<div id="btn-div" style="width: 300px; display: flex; flex-direction: column; justify-content: space-between;">
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
-			<button class="colour-btn" type="button">??</button>
+		<div style="display: flex; width: 740px; height: 386px;">
+			<div>
+				<div class="wheel" id="colorWheelDemo"></div>
+				<input id="hex" type="text" style="margin: 12px 0px 0px; width: 300px; height: 28px;"></input>
+			</div>
+			<div id="colorname" style="margin: 0px 20px; padding: 22px 20px; border-radius: 15px; width: 100px;">
+			</div>
+			<div id="btn-div"
+				style="width: 300px; display: flex; flex-direction: column; justify-content: space-between;">
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+				<button class="colour-btn" type="button">??</button>
+			</div>
 		</div>
 	</div>
 
