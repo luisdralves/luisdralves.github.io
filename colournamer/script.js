@@ -3,7 +3,6 @@ var tabPhoto = document.getElementById('tabPhoto')
 var tabPicker = document.getElementById('tabPicker')
 
 function tab (event, tab) {
-  console.log(event, tab)
   event.preventDefault()
   tabCamera.classList.remove('active')
   tabPhoto.classList.remove('active')
@@ -122,11 +121,29 @@ function update (c) {
   colourName(hexToRGB(c))
   bg.style.backgroundColor = c
   if (colorWheel.color.value < 75) {
-    bg.style.color = 'white'
-    document.getElementById('btn-div').style.color = 'white'
+    var bw = 'white'
+    var btnsCam = document.getElementsByClassName('btn-outline-dark')
+    for (var i = 0; i < btnsCam.length; i++) {
+      var btnCam = btnsCam[i]
+      btnCam.classList.remove('btn-outline-dark')
+      btnCam.classList.add('btn-outline-light')
+    }
   } else {
-    bg.style.color = 'black'
-    document.getElementById('btn-div').style.color = 'black'
+    var bw = 'black'
+    var btnsCam = document.getElementsByClassName('btn-outline-light')
+    for (var i = 0; i < btnsCam.length; i++) {
+      var btnCam = btnsCam[i]
+      btnCam.classList.remove('btn-outline-light')
+      btnCam.classList.add('btn-outline-dark')
+    }
+  }
+
+  bg.style.color = bw
+  document.getElementById('btn-div').style.color = bw
+  navs = document.getElementsByClassName('nav-link')
+  for (var i = 0; i < navs.length; i++) {
+    if (!navs[i].classList.contains('active')) navs[i].style.color = bw
+    else navs[i].style.color = 'black'
   }
 }
 
@@ -219,4 +236,9 @@ canvas.addEventListener('click', function (e) {
     imageData.data[pos + 2].toString(16).padStart(2, '0')
   update(hexInput.value)
   colorWheel.color.hexString = hexInput.value
+  window.scrollTo({
+    left: 0,
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  })
 })

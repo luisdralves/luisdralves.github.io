@@ -9,6 +9,10 @@
 	border-radius: 10px;
 }
 
+.nav-link {
+	color: black;
+}
+
 body, .btn {
 	font-family: Ubuntu !important;
 }
