@@ -1,3 +1,30 @@
+var tabCamera = document.getElementById('tabCamera')
+var tabPhoto = document.getElementById('tabPhoto')
+var tabPicker = document.getElementById('tabPicker')
+
+function tab (event, tab) {
+  console.log(event, tab)
+  event.preventDefault()
+  tabCamera.classList.remove('active')
+  tabPhoto.classList.remove('active')
+  tabPicker.classList.remove('active')
+  document.getElementById(tab).classList.add('active')
+  document.getElementById('tabCameraContent').style.display = 'none'
+  document.getElementById('tabPhotoContent').style.display = 'none'
+  document.getElementById('tabPickerContent').style.display = 'none'
+  document.getElementById(tab + 'Content').style.display = 'block'
+}
+
+tabCamera.addEventListener('click', function (e) {
+  tab(e, 'tabCamera')
+})
+tabPhoto.addEventListener('click', function (e) {
+  tab(e, 'tabPhoto')
+})
+tabPicker.addEventListener('click', function (e) {
+  tab(e, 'tabPicker')
+})
+
 function hexToRGB (hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   return result
@@ -77,7 +104,7 @@ function colourName (colour) {
   for (i = 0; i < 8; i++) {
     if (i >= diffs.length) break
     btns[i].outerHTML =
-      '<button class="colour-btn" type="button" onclick="setHex(\'' +
+      '<button class="btn colour-btn" type="button" onclick="setHex(\'' +
       diffs[i][1][0] +
       '\')" style="background-color: ' +
       diffs[i][1][0] +
@@ -94,9 +121,13 @@ function colourName (colour) {
 function update (c) {
   colourName(hexToRGB(c))
   bg.style.backgroundColor = c
-  if (colorWheel.color.value < 75)
+  if (colorWheel.color.value < 75) {
+    bg.style.color = 'white'
     document.getElementById('btn-div').style.color = 'white'
-  else document.getElementById('btn-div').style.color = 'black'
+  } else {
+    bg.style.color = 'black'
+    document.getElementById('btn-div').style.color = 'black'
+  }
 }
 
 function setHex (hex) {
@@ -120,7 +151,7 @@ var colorWheel = new iro.ColorPicker('#colorWheelDemo', {
 })
 
 hexInput = document.getElementById('hex')
-bg = document.getElementById('colorname')
+bg = document.getElementsByTagName('body')[0]
 btns = document.getElementsByClassName('colour-btn')
 update(colorWheel.color.hexString)
 hexInput.value = colorWheel.color.hexString
@@ -138,21 +169,26 @@ var video = document.querySelector('#cam')
 var canvas = document.getElementById('pause')
 var context = canvas.getContext('2d')
 
-function start () {
-  if (navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices
-      .getUserMedia({ video: true })
-      .then(function (stream) {
-        video.srcObject = stream
-      })
-      .catch(function (err0r) {
-        console.log('Something went wrong!')
-      })
-  }
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream
+    })
+    .catch(function (err0r) {
+      console.log('Something went wrong!')
+    })
+}
+
+function resume () {
+  video.style.display = 'block'
+  canvas.style.display = 'none'
 }
 
 function stop () {
   //video.pause()
+  video.style.display = 'none'
+  canvas.style.display = 'block'
   canvas.width = video.videoWidth
   canvas.height = video.videoHeight
   context.drawImage(video, 0, 0)
@@ -166,7 +202,7 @@ canvas.addEventListener('click', function (e) {
   var rect = e.target.getBoundingClientRect()
   var x = e.clientX - rect.left //x position within the element.
   var y = e.clientY - rect.top //y position within the element.
-  var ratio = video.videoWidth / 240
+  var ratio = video.videoWidth / 720
   x *= ratio
   y *= ratio
   pos = Math.ceil(y) * video.videoWidth * 4 + Math.ceil(x) * 4

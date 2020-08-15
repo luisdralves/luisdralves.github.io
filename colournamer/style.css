@@ -3,11 +3,12 @@
 }
 
 .colour-btn {
-	width: 100%;
+	margin: 2px auto;
+	width: 50%;
 	padding: 8px;
 	border-radius: 10px;
 }
 
-body {
+body, .btn {
 	font-family: Ubuntu !important;
 }
