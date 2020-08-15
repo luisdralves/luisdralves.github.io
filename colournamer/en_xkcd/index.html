@@ -12,33 +12,43 @@
 <body>
 	<h1 style="text-align: center">Colour Namer 🎨</h1>
 	<h3 style="text-align: center">XKCD Colours</h3>
-	<div style="display: flex; width:max-content; margin: auto">
-		<div id="basic" style="width: 240px">
-			<video autoplay id="cam" style="width: 240px; height: 180px"></video>
-			<canvas id="pause" style="width: 240px; height: 180px"></canvas>
+	<div style="margin: auto; width: 720px">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" href="#" id="tabCamera">Camera</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="tabPhoto">Upload photo</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="tabPicker">Colour picker</a>
+			</li>
+		</ul>
+		<div id="tabCameraContent" style="width: 720px">
+			<video autoplay id="cam" style="width: 720px;"></video>
+			<canvas id="pause" style="width: 720px; display: none"></canvas>
 			<div style="display: flex; justify-content: space-around">
-				<button class="btn btn-primary" onclick="start()">Start</button>
-				<button class="btn btn-primary" onclick="stop()">Take still</button>
+				<button class="btn btn-outline-dark" onclick="stop()">Take still</button>
+				<button class="btn btn-outline-dark" onclick="resume()">Resume</button>
 			</div>
 		</div>
-		<div style="display: flex; width: 740px; height: 386px;">
-			<div>
-				<div class="wheel" id="colorWheelDemo"></div>
-				<input id="hex" type="text" style="margin: 12px 0px 0px; width: 300px; height: 28px;"></input>
-			</div>
-			<div id="colorname" style="margin: 0px 20px; padding: 22px 20px; border-radius: 15px; width: 100px;">
-			</div>
-			<div id="btn-div"
-				style="width: 300px; display: flex; flex-direction: column; justify-content: space-between;">
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-				<button class="btn colour-btn" type="button">??</button>
-			</div>
+		<div id="tabPhotoContent" style="display: none;">
+			<p>Not yet implemented...</p>
+		</div>
+		<div id="tabPickerContent" style="width: 300px; margin: auto; display: none;">
+			<div class="wheel" id="colorWheelDemo"></div>
+			<input id="hex" type="text" style="margin: 12px 0px 0px; width: 300px; height: 28px;"></input>
+		</div>
+
+		<div id="btn-div" style="width: 720px; display: flex; flex-direction: column; justify-content: space-between;">
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
+			<button class="btn colour-btn" type="button">??</button>
 		</div>
 	</div>
 
