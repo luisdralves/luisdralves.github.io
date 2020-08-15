@@ -59,11 +59,11 @@ function colourDiff(c1, c2) {
 }
 function colourName(colour) {
 	var diffs = []
-	colours.forEach((namedColour) => {
-		diff = colourDiff(colour, hexToRGB(namedColour[0]))
+	for (hexCode in colours) {
+		diff = colourDiff(colour, hexToRGB(hexCode))
 		if (diff < 80)
-			diffs.push([diff, namedColour])
-	})
+			diffs.push([diff, [hexCode, colours[hexCode]]])
+	}
 	ret = ""
 	diffs.sort(function compare(diff1, diff2) {
 		if (diff1[0] > diff2[0])
