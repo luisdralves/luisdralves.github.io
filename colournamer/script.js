@@ -214,16 +214,14 @@ function stop () {
   //img.src = canvas.toDataURL('image/webp');
 }
 
-canvas.addEventListener('click', function (e) {
+function colorInMouseCursor (e) {
   var imageData = context.getImageData(0, 0, canvas.width, canvas.height)
   //https://stackoverflow.com/questions/3234256/find-mouse-position-relative-to-element/42111623#42111623
   var rect = e.target.getBoundingClientRect()
   var x = e.clientX - rect.left //x position within the element.
   var y = e.clientY - rect.top //y position within the element.
   var width = window.innerWidth > 0 ? window.innerWidth : screen.width
-  console.log(width)
   var ratio = video.videoWidth / width
-  console.log(ratio)
   x *= ratio
   y *= ratio
   pos = Math.ceil(y) * video.videoWidth * 4 + Math.ceil(x) * 4
@@ -231,13 +229,48 @@ canvas.addEventListener('click', function (e) {
     //its always a multiple of 4 isnt it 🤔🤔🤔
     pos++
   }
-  console.log(x, y, pos)
-
-  hexInput.value =
+  return (
     '#' +
     imageData.data[pos].toString(16).padStart(2, '0') +
     imageData.data[pos + 1].toString(16).padStart(2, '0') +
     imageData.data[pos + 2].toString(16).padStart(2, '0')
+  )
+}
+
+canvas.addEventListener('click', function (e) {
+  hexInput.value = colorInMouseCursor(e)
+
   colorWheel.color.hexString = hexInput.value
-  //window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'})
+  window.scrollTo({
+    left: 0,
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  })
+})
+
+canvas.addEventListener('mouseover', function (e) {
+  var previewDiv = document.createElement('div')
+  previewDiv.id = 'previewDiv'
+  previewDiv.style.position = 'absolute'
+  previewDiv.style.left = e.clientX - 32 + 'px'
+  previewDiv.style.top = e.clientY - 64 + 'px'
+  previewDiv.style.width = '64px'
+  previewDiv.style.height = '64px'
+  previewDiv.style.borderRadius = '32px'
+  previewDiv.style.borderStyle = 'solid'
+  previewDiv.style.borderWidth = '4px'
+  previewDiv.style.backgroundColor = colorInMouseCursor(e)
+  document.body.appendChild(previewDiv)
+})
+
+canvas.addEventListener('mousemove', function (e) {
+  previewDiv = document.getElementById('previewDiv')
+  previewDiv.style.left = e.clientX - 32 + 'px'
+  previewDiv.style.top = e.clientY - 64 + 'px'
+  previewDiv.style.backgroundColor = colorInMouseCursor(e)
+})
+
+canvas.addEventListener('mouseout', function (e) {
+  previewDiv = document.getElementById('previewDiv')
+  previewDiv.remove()
 })
