@@ -118,32 +118,37 @@ function colourName (colour) {
   return ret
 }
 function update (c) {
+  console.count()
   colourName(hexToRGB(c))
   bg.style.backgroundColor = c
   if (colorWheel.color.value < 75) {
     var bw = 'white'
     var btnsCam = document.getElementsByClassName('btn-outline-dark')
-    for (var i = 0; i < btnsCam.length; i++) {
-      var btnCam = btnsCam[i]
-      btnCam.classList.remove('btn-outline-dark')
+    console.log(btnsCam)
+    while(btnsCam.item(0) !== null) {
+      var btnCam = btnsCam.item(0)
       btnCam.classList.add('btn-outline-light')
+      btnCam.classList.remove('btn-outline-dark')
     }
+    console.log(btnsCam)
   } else {
     var bw = 'black'
     var btnsCam = document.getElementsByClassName('btn-outline-light')
-    for (var i = 0; i < btnsCam.length; i++) {
-      var btnCam = btnsCam[i]
-      btnCam.classList.remove('btn-outline-light')
+    console.log(btnsCam)
+    while(btnsCam.item(0) !== null) {
+      var btnCam = btnsCam.item(0)
       btnCam.classList.add('btn-outline-dark')
+      btnCam.classList.remove('btn-outline-light')
     }
+    console.log(btnsCam)
   }
 
   bg.style.color = bw
   document.getElementById('btn-div').style.color = bw
   navs = document.getElementsByClassName('nav-link')
   for (var i = 0; i < navs.length; i++) {
-    if (!navs[i].classList.contains('active')) navs[i].style.color = bw
-    else navs[i].style.color = 'black'
+    if (!navs.item(i).classList.contains('active')) navs.item(i).style.color = bw
+    else navs.item(i).style.color = 'black'
   }
 }
 
@@ -234,7 +239,6 @@ canvas.addEventListener('click', function (e) {
     imageData.data[pos].toString(16).padStart(2, '0') +
     imageData.data[pos + 1].toString(16).padStart(2, '0') +
     imageData.data[pos + 2].toString(16).padStart(2, '0')
-  update(hexInput.value)
   colorWheel.color.hexString = hexInput.value
   window.scrollTo({
     left: 0,
