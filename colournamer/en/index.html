@@ -13,7 +13,7 @@
 <body>
 	<h1 style="text-align: center">Colour Namer 🎨</h1>
 	<h3 style="text-align: center">Wikipedia Dataset</h3>
-	<div style="margin: auto; width: 720px">
+	<div style="margin: auto; width: 100%">
 		<ul class="nav nav-tabs">
 			<li class="nav-item">
 				<a class="nav-link active" href="#" id="tabCamera">Camera</a>
@@ -25,9 +25,9 @@
 				<a class="nav-link" href="#" id="tabPicker">Colour picker</a>
 			</li>
 		</ul>
-		<div id="tabCameraContent" style="width: 720px">
-			<video autoplay id="cam" style="width: 720px;"></video>
-			<canvas id="pause" style="width: 720px; display: none"></canvas>
+		<div id="tabCameraContent" style="width: 100%">
+			<video autoplay id="cam" style="width: 100%;"></video>
+			<canvas id="pause" style="width: 100%; display: none"></canvas>
 			<div style="display: flex; justify-content: space-around">
 				<button class="btn btn-outline-dark" onclick="stop()">Take still</button>
 				<button class="btn btn-outline-dark" onclick="resume()">Resume</button>
@@ -41,7 +41,7 @@
 			<input id="hex" type="text" style="margin: 12px 0px 0px; width: 300px; height: 28px;"></input>
 		</div>
 
-		<div id="btn-div" style="width: 720px; display: flex; flex-direction: column; justify-content: space-between;">
+		<div id="btn-div" style="width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
 			<button class="btn colour-btn" type="button">??</button>
 			<button class="btn colour-btn" type="button">??</button>
 			<button class="btn colour-btn" type="button">??</button>
