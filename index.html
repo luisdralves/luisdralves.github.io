@@ -6,484 +6,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luís DR Alves</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="https://kit.fontawesome.com/53daabb524.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+
+  <style>
+    #bg1, #bg2, #bg3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150vw;
+      height: 150vh;
+    }
+
+    .bg {
+      position: absolute;
+      top: -25vh;
+      left: -25vw;
+      width: 125vw;
+      height: 125vh;
+      overflow: hidden;
+    }
+
+    #profilePContainer {
+      border-radius: 128px;
+      border: solid 8px black;
+      width: 128px;
+      height: 128px;
+      overflow: hidden;
+      margin: -64px auto;
+    }
+
+    #profileP {
+      width: 128px;
+    }
+
+    .container {
+      position: absolute;
+      top: 33%;
+      bottom: 33%;
+      left: 33%;
+      right: 33%;
+    }
+
+    .bn632-hover {
+        width: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 55px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+      
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+      
+      .bn632-hover:focus {
+        outline: none;
+      }
+      
+      .bn632-hover.bn27 {
+          background-image: linear-gradient(
+            to right,
+            #ff0,
+            #0fa,
+            #0af
+          );
+          box-shadow: 0 4px 15px 0 rgba(0, 255, 0, 0.75);
+        }
+    .buttonContainer {
+        margin: 64px auto;
+        width: min-content;
+    }
+  </style>
 </head>
 
-<body class="bg-dark">
-  <h3 class="title">Luís D. R. Alves</h3>
-  <ul class="nav nav-tabs lang-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#nav-en">EN</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#nav-pt">PT</a>
-    </li>
-  </ul>
-  <div id="myTabContent-main" class="tab-content">
-    <div class="tab-pane fade show active" id="nav-en">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#bio">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#projects">Projects</a>
-        </li>
-      </ul>
-      <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade show active" id="bio">
-          <div class="flex">
-            <div class="card bg-info mb-3">
-              <h5 class="card-header">Contact info</h5>
-              <div class="list-group">
-                <div class="list-group-item">
-                  <p>Luís Miguel da Rocha Alves</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-envelope"></i>
-                  <p>
-                    <a href="mailto:luis.miguel.alves@fe.up.pt">luis.miguel.alves@fe.up.pt</a><br>
-                    <a href="mailto:luisdralves@gmail.com">luisdralves@gmail.com</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-link"></i>
-                  <p>
-                    <a href="https://luisdralves.github.io">luisdralves.github.io</a><br>
-                    <a href="http://luisdralves.dynip.sapo.pt">luisdralves.dynip.sapo.pt</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-github"></i>
-                  <a href="https://github.com/luisdralves">github.com/luisdralves</a>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-id-badge"></i>
-                  <p>
-                    <a href="res/CV.pdf"><i>Curriculum Vitae</i> (English)</a><br>
-                    <a href="res/CVPT.pdf"><i>Curriculum Vitae</i> (Portuguese)</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <p>161 Rua de Reiros, 4905-271 Viana do Castelo (Portugal)</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-whatsapp"></i>
-                  <p>+351 967 040 285</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-skype"></i>
-                  <a href="skype:live:11a61e4ab2928775">live:11a61e4ab2928775</a>
-                </div>
-              </div>
-            </div>
-            <div class="motivation">
-              <p>
-                Hi. I am Luís Alves. A young software developer looking for a first job.
-              </p>
-              <p>
-                My passion for programming started with <a href="https://www.roboparty.org/">RoboParty</a>, a robot
-                building competition based on the Bot n Roll ONE A, an Arduino compatible board. We were divided in
-                groups and I was more interested in the programming process than the building itself. It was my first
-                real exposure to the logical world of programming and the moment I decided to pursue this passion.
-              </p>
-              <p>
-                A few months later, I was enrolling at <a href="https://fe.up.pt">Faculdade de Engenharia da
-                  Universidade do Porto (FEUP)</a>, in an Integrated Master in <a href="https://dei.fe.up.pt/">
-                  Informatics and Computing Engineering</a>. There my horizons were vastly expanded, learning both what
-                it means to be a software developer and an engineer.
-              </p>
-              <p>
-                In the meantime, I had been very active in the world of organizations, volunteering in a local
-                association in my hometown - <a href="https://associacaodeao.wixsite.com/ajdeao">Associação Juvenil de
-                  Deão (AJD)</a> - where I eventually became president, as well as at the <a href="https://fnaj.pt">
-                  federation of associations</a> for my district. We provided activities, classes, and workshops for the
-                local community, and we developed projects in several areas such as civility, equality, inclusivity, and
-                environment. Some by ourselves, some in partnership with the federation and other organizations in the
-                area, and some in an international level through the <a
-                  href="https://ec.europa.eu/programmes/erasmus-plus/node_en"> Erasmus+ programme</a>. I was
-                particularly involved in the latter, talking to international partners, applying to grants, and
-                traveling a bit all over Europe.
-              </p>
-              <p>
-                Upon reaching the necessary credits to achieve a Bachelor's Degree, I decided to take a break and
-                volunteer abroad through the European Solidarity Corps. I was deployed to Razlog, Bulgaria, where I
-                joined the team at <a href="https://iicbg.org">International Initiatives for Cooperation</a>.
-              </p>
-              <p>
-                At the moment, I find myself more inclined to get a job, gain much needed experience, and start building
-                my life. I plan on finishing my Master's eventually, but I don't think it's what I need right now.
-              </p>
-              <p>
-                Feel free to have a look at my details and CV on the left, as well as some of my web projects in the
-                other tab.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="projects">
-          <table class="table table-hover table-dark">
-            <tbody>
-              <tr>
-                <td>Loureiro</td>
-                <td>
-                  Homepage for the loureiro wine variety <br>
-                  <span class="techs">Laravel, HTML, CSS, JavaScript</span>
-                </td>
-                <td>2020</td>
-                <td><a href="http://luisdralves.dynip.sapo.pt:8001" class="btn btn-outline-warning">Mirror 1</a></td>
-              </tr>
-              <tr>
-                <td>Colour Namer</td>
-                <td>Names colours from hex code or colour input <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/colournamer/index.html" class="btn btn-outline-light">Mirror
-                    1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/colournamer/index.html"
-                    class="btn btn-outline-light">Mirror
-                    2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/colournamer/index.html"
-                    class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>What's the time in rels?</td>
-                <td>Alternative time-keeping system based around the sunrise <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/rels/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/rels/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/rels/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Gogol™</td>
-                <td>Handwritten google search clone <br>
-                  <span class="techs">HTML, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/gogol/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/gogol/index.html" class="btn btn-outline-light">Mirror
-                    2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/gogol/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Simple Oscilator</td>
-                <td>Oscilators with frequency and intensity controls, with spectral and frequency visualizers <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td>
-                  <a href="https://luisdralves.github.io/freq/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/freq/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/freq/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Meeting Point</td>
-                <td>Platform for city suggestions and occurrences <br>
-                  <span class="techs">Laravel, HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td><a href="http://luisdralves.dynip.sapo.pt:8000" class="btn btn-outline-warning">Mirror 1</a></td>
-              </tr>
-              <tr>
-                <td>Map IO</td>
-                <td>Mapping experiments and demos for Meeting Point <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td>
-                  <a href="https://luisdralves.github.io/lbaw/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/lbaw/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/lbaw/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Fake News</td>
-                <td>News site with categories and comments <br>
-                  <span class="techs">HTML, CSS, PHP, JavaScript</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://web.fe.up.pt/~up201405308/FakeNews/list_news.php"
-                    class="btn btn-outline-light">Mirror
-                    1</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Simple Reddit</td>
-                <td>Reddit-like aggregator <br>
-                  <span class="techs">HTML, CSS, PHP</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://web.fe.up.pt/~up201405308/SimpleReddit/index.php"
-                    class="btn btn-outline-light">Mirror
-                    1</a>
-                </td>
-              </tr>
-              <tr>
-                <td>AJD</td>
-                <td>Website mockup for AJD (wip) <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://luisdralves.github.io/ajd/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/ajd/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/ajd/index.html" class="btn btn-outline-warning">Mirror 3</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="note"><i>Links in yellow are self-hosted and might be offline</i></p>
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane fade" id="nav-pt">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#bio-pt">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#projects-pt">Projetos</a>
-        </li>
-      </ul>
-      <div id="myTabContent-pt" class="tab-content">
-        <div class="tab-pane fade show active" id="bio-pt">
-          <div class="flex">
-            <div class="card bg-info mb-3">
-              <h5 class="card-header">Contactos</h5>
-              <div class="list-group">
-                <div class="list-group-item">
-                  <p>Luís Miguel da Rocha Alves</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-envelope"></i>
-                  <p>
-                    <a href="mailto:luis.miguel.alves@fe.up.pt">luis.miguel.alves@fe.up.pt</a><br>
-                    <a href="mailto:luisdralves@gmail.com">luisdralves@gmail.com</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-link"></i>
-                  <p>
-                    <a href="https://luisdralves.github.io">luisdralves.github.io</a><br>
-                    <a href="http://luisdralves.dynip.sapo.pt">luisdralves.dynip.sapo.pt</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-github"></i>
-                  <a href="https://github.com/luisdralves">github.com/luisdralves</a>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-id-badge"></i>
-                  <p>
-                    <a href="res/CV.pdf"><i>Curriculum Vitae</i> (Inglês)</a><br>
-                    <a href="res/CVPT.pdf"><i>Curriculum Vitae</i> (Português)</a>
-                  </p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <p>161 Rua de Reiros, 4905-271 Viana do Castelo (Portugal)</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-whatsapp"></i>
-                  <p>+351 967 040 285</p>
-                </div>
-                <div class="list-group-item align-left">
-                  <i class="fab fa-skype"></i>
-                  <a href="skype:live:11a61e4ab2928775">live:11a61e4ab2928775</a>
-                </div>
-              </div>
-            </div>
-            <div class="motivation">
-              <p>
-                Olá. O meu nome é Luís Alves. Um jovem <i>software developer</i> à procura de um primeiro trabalho.
-              </p>
-              <p>
-                A minha paixão por programação começou com a <a href="https://www.roboparty.org/">RoboParty</a>, uma
-                competição de construção de <i>robots</i> baseada na Bot n Roll ONE A, uma placa compatível com
-                <i>Arduino</i>. Estávamos divididos em grupos, e eu estava mais interessado no processo de programação
-                do que propriamente na construção. Foi a minha primeira exposição ao lógico mundo da programação e o
-                momento em que decidi perseguir esta paixão.
-              </p>
-              <p>
-                Passados alguns meses, estava a inscrever-me na <a href="https://fe.up.pt">Faculdade de Engenharia da
-                  Universidade do Porto (FEUP)</a>, no <a href="https://dei.fe.up.pt/">Mestrado Integrado de Engenharia
-                  Informática e Computação</a>. Lá os meus horizontes foram vastamente expandidos, aprendendo tanto o
-                que significa ser um <i>software developer</i>, bem como um engenheiro.
-              </p>
-              <p>
-                Entretanto, fui também bastante ativo no mundo do associativismo, sendo voluntário numa associação na
-                minha terra - <a href="https://associacaodeao.wixsite.com/ajdeao"> Associação Juvenil de Deão (AJD) </a>
-                - onde acabei por me tornar presidente, bem como na <a href="https://fnaj.pt"> federação de associações
-                </a> do meu distrito. Organizamos e promovemos atividades, aulas, e workshops para a comunidade
-                local, e desenvolvemos projetos em diversas áreas, como civilidade, igualdade, inclusão, e
-                ambientalismo. Alguns por nós mesmos, outros em parceria com a federação e outras organizações da área,
-                e alguns a nível internacional através do <a
-                  href="https://ec.europa.eu/programmes/erasmus-plus/node_en"> programa Erasmus+</a>. Estive
-                particularmente envolvido neste último, falando com parceiros internacionais, candidatando-nos a
-                projetos, e viajando um pouco por toda a Europa.
-              </p>
-              <p>
-                Ao obter os créditos necessários para uma Licenciatura, decidi fazer uma pausa e voluntariar-me fora do
-                país, através do Corpo Europeu de Solidariedade. Fui enviado para Razlog, Bulgária, onde me juntei à
-                equipa <a href="https://iicbg.org"> International Initiatives for Cooperation</a>.
-              </p>
-              <p>
-                No momento, sinto-me mais inclinado a procurar um emprego, ganhar a experiência que bem preciso, e
-                começar a construir a minha vida. Planeio terminar o meu mestrado eventualmente, mas não acho que seja o
-                momento mais apropriado.
-              </p>
-              <p>
-                Esteja à vontade para ver os meus detalhes e o meu currículo à esquerda, e alguns dos meus projetos Web
-                na outra aba.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="projects-pt">
-          <table class="table table-hover table-dark">
-            <tbody>
-            <tbody>
-              <tr>
-                <td>Loureiro</td>
-                <td>
-                  Homepage para a casta de vinhos Loureiro <br>
-                  <span class="techs">Laravel, HTML, CSS, JavaScript</span>
-                </td>
-                <td>2020</td>
-                <td><a href="http://luisdralves.dynip.sapo.pt:8001" class="btn btn-outline-warning">Mirror 1</a></td>
-              </tr>
-              <tr>
-                <td>Nomeador de Cores</td>
-                <td>Dá nomes a cores com base no selecionador ou por código hexadecimal <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/colournamer/index.html" class="btn btn-outline-light">Mirror
-                    1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/colournamer/index.html"
-                    class="btn btn-outline-light">Mirror
-                    2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/colournamer/index.html"
-                    class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Quantos reles são?</td>
-                <td>Sistema de tempo alternativo baseado no nascer do sol <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/rels/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/rels/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/rels/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Gogol™</td>
-                <td>Clone da pesquisa Google escrito à mão <br>
-                  <span class="techs">HTML, JavaScript</span></td>
-                <td>2020</td>
-                <td>
-                  <a href="https://luisdralves.github.io/gogol/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/gogol/index.html" class="btn btn-outline-light">Mirror
-                    2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/gogol/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Simple Oscilator</td>
-                <td>Osciladores com controlos de frequência e intensidade, com visualizadores de espectro e de frequência <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td>
-                  <a href="https://luisdralves.github.io/freq/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/freq/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/freq/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Meeting Point</td>
-                <td>Plataforma de sugestões e ocorrências para uma cidade <br>
-                  <span class="techs">Laravel, HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td><a href="http://luisdralves.dynip.sapo.pt:8000" class="btn btn-outline-warning">Mirror 1</a></td>
-              </tr>
-              <tr>
-                <td>Map IO</td>
-                <td>Experiências de mapeamento e demonstrações para o Meeting Point <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2019</td>
-                <td>
-                  <a href="https://luisdralves.github.io/lbaw/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/lbaw/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/lbaw/index.html" class="btn btn-outline-warning">Mirror
-                    3</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Fake News</td>
-                <td>Site de notícias com categorias e comentários <br>
-                  <span class="techs">HTML, CSS, PHP, JavaScript</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://web.fe.up.pt/~up201405308/FakeNews/list_news.php"
-                    class="btn btn-outline-light">Mirror
-                    1</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Simple Reddit</td>
-                <td>Agregador tipo reddit <br>
-                  <span class="techs">HTML, CSS, PHP</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://web.fe.up.pt/~up201405308/SimpleReddit/index.php"
-                    class="btn btn-outline-light">Mirror
-                    1</a>
-                </td>
-              </tr>
-              <tr>
-                <td>AJD</td>
-                <td>Website esqueleto para a AJD (não acabado) <br>
-                  <span class="techs">HTML, CSS, JavaScript</span></td>
-                <td>2018</td>
-                <td>
-                  <a href="https://luisdralves.github.io/ajd/index.html" class="btn btn-outline-light">Mirror 1</a>
-                  <a href="https://web.fe.up.pt/~up201405308/ajd/index.html" class="btn btn-outline-light">Mirror 2</a>
-                  <a href="http://luisdralves.dynip.sapo.pt/ajd/index.html" class="btn btn-outline-warning">Mirror 3</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="note"><i>Links a amarelo são auto-hospedados e podem estar offline</i></p>
-        </div>
-      </div>
-    </div>
+<body style="background-color: black;">
+  <div class="bg">
+    <img id="bg1" src="res/1.png">
+    <img id="bg2" src="res/2.png">
+    <img id="bg3" src="res/3.png">
   </div>
 
+  <div class="container">
+    <div id="profilePContainer">
+      <img id="profileP" src="cv/20190806_192437_cropped_min.jpg">
+    </div>
+    <div class="buttonContainer">
+    <a href="/details.html"><button class="bn632-hover bn27">Luís D. R. Alves</button></a>
+</div>
+  </div>
 </body>
+
+<script>
+    window.onload = init;
+    function init() {
+        if (window.Event) {
+        document.captureEvents(Event.MOUSEMOVE);
+        }
+        document.onmousemove = getCursorXY;
+    }
+
+    function getCursorXY(e) {
+        let z = 0.2
+        let x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+        let y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+        [-0.5, 0.5, 1.5].forEach((i, index) => {
+            console.log('bg' + (index + 1))
+            document.getElementById('bg' + (index + 1)).style.top = (i * z * y) - (z * window.innerHeight) + 'px'
+            document.getElementById('bg' + (index + 1)).style.left = (i * z * x) - (z * window.innerWidth) + 'px'
+        })
+    }
+</script>
 
 </html>
