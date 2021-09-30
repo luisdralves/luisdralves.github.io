@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Spacium Ipsum</title>
+    <style>
+      form {
+        display: grid;
+        margin: auto;
+        max-width: 256px;
+      }
+
+      input {
+        margin-bottom: 16px;
+      }
+
+      #text {
+        margin: 32px auto;
+        width: 75%;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="paragraphs">Paragraphs</label>
+      <input id="paragraphs" type="number" value="5"></input>
+      <label for="min-sentences">Minimum sentences per paragraph</label>
+      <input id="min-sentences" type="number" value="8"></input>
+      <label for="max-sentences">Maximum sentences per paragraph</label>
+      <input id="max-sentences" type="number" value="10"></input>
+      <button type="button" onclick="onSubmit()">Generate</button>
+    </form>
+    <div id="text"></div>
+  </body>
+  <script src="res/space.js"></script>
+  <script>
+    const onSubmit = () => {
+      const paragraphs = Number(document.getElementById("paragraphs").value);
+      const min = Number(document.getElementById("min-sentences").value);
+      const max = Number(document.getElementById("max-sentences").value);
+      if(paragraphs < 1) {
+        alert(`Invalid paragraphs ${paragraphs}`);
+      } else if(max < 1 || min < 1 || min > max) {
+        alert(`Invalid interval [${min}, ${max}]`);
+      } else {
+        let text = "";
+        
+        for(let i = 0; i < paragraphs; i++) {
+          const sentences = Math.random() * (max - min) + min;
+          
+          for(let j = 0; j < sentences; j++) {
+            const sentenceIndex = Math.floor((Math.random()*space.length));
+            text+=space[sentenceIndex]+' ';
+          }
+
+          text+='</p>'
+        }
+        document.getElementById("text").innerHTML = text;
+      }
+    }
+
+    onSubmit();
+  </script>
+</html>
